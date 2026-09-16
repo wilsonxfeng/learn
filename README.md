@@ -18,6 +18,7 @@ This is a personal system I built for myself, shared as-is. Built as a pi config
 
 ## Install
 
+
 This repo **is** a `.pi` directory. From your learning project's root:
 
 ```bash
