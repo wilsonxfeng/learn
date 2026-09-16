@@ -570,11 +570,12 @@ export default function askUserQuestion(pi: ExtensionAPI) {
 		name: "ask_user_question",
 		label: "ask_user_question",
 		description:
-			"Ask the user a single question and pause execution until they answer. Use this when requirements are ambiguous, user preferences are needed, a decision would materially affect implementation, or you need confirmation before proceeding. Ask exactly one question per tool call, and prefer multiple separate tool calls over bundling unrelated questions together.",
+			"Ask the user a single question and pause execution until they answer. Omit options for a free-form response, including an explanation of their reasoning during a learning check; evaluate that response yourself afterward. Also use this for preferences, decisions, and clarifications. Ask exactly one question per tool call.",
 		promptSnippet:
-			"Use this tool to ask exactly one clarifying question, missing-requirement question, preference question, or decision question before continuing.",
+			"Use this tool for one question, including a free-form learning check when options are omitted. Evaluate the answer after the tool returns.",
 		promptGuidelines: [
 			"Ask exactly one question per tool call.",
+			"For an open-answer learning check, omit options and ask the user to explain or apply the idea in their own words.",
 			"If you need answers to multiple questions, make multiple separate ask_user_question tool calls instead of combining them into one prompt.",
 			'Users will always be able to select "Other" to provide custom text input when options are provided.',
 			"Use multiSelect: true only when you need multiple answers to the same question.",
