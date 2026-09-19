@@ -1,0 +1,31 @@
+{
+  "topic": "Example source-grounded course",
+  "project": {"id": "example", "path": "Example"},
+  "score_dimensions": ["E", "P", "R", "T"],
+  "authority_policy": "Use the listed local source as exclusive authority; do not add web enrichment or alternate notation.",
+  "teaching_notes": "Preserve source terminology and hypotheses; distinguish prior exposure from demonstrated mastery.",
+  "score_rubric": {
+    "E": {"0": "untested", "1": "prompted", "2": "independent", "3": "flexible"},
+    "P": {"0": "untested", "1": "prompted", "2": "independent", "3": "flexible"},
+    "R": {"0": "untested", "1": "prompted", "2": "independent", "3": "flexible"},
+    "T": {"0": "untested", "1": "prompted", "2": "independent", "3": "flexible"}
+  },
+  "authority_inputs": [
+    {"path": "CS245/notes/Lecture Notes.md", "label": "approved lecture notes"}
+  ],
+  "prior_exposure": ["X-01"],
+  "initial_cold_due_date": "2026-09-19",
+  "modules": [
+    {
+      "id": "X-01",
+      "title": "Foundations",
+      "prerequisites": [],
+      "packet": {
+        "sources": [{"path": "CS245/notes/Lecture Notes.md", "label": "lecture notes"}],
+        "sections": ["the exact section or line range approved by the curriculum designer"]
+      },
+      "exit_target": "State the source definition, solve one source-style problem, and explain one failure case.",
+      "initial_mode": "cold"
+    }
+  ]
+}

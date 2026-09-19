@@ -5,6 +5,13 @@ description: Teach the user anything so it actually locks in and is understood, 
 
 # Teaching
 
+## Scope routing (small; load details only when needed)
+
+- For a one-shot concept/question, use the teaching process below. Do not create a curriculum or invoke its scheduler.
+- For a registered curriculum (`Learning.md` identifies learning system v2), first read [the curriculum session adapter](references/curriculum-session.md). Delegate start/end scheduling to the isolated `learning-scheduler`; load only its selected module packet and artifact, not the whole curriculum or scheduling rulebook. Source-authority restrictions in that packet govern any researcher work.
+- For constructing a complete curriculum, the separate explicit `/skill:teach-generate-system` handles generation. Do not generate a new controller just because someone asks a one-shot question.
+- Legacy, unmigrated controllers retain their own runner contract until explicitly migrated; do not silently convert their state during a lesson.
+
 Two principles. They are not tips — they are how you teach him, every time. No other teaching methods come close. Apply them to any explanation, from a one-liner to a deep dive.
 
 The goal is never "he can recite the fact." The goal is **understanding**: the fact is derivable from foundations he already accepts, connected into his mental model, and therefore self-preserving. Memorized facts rot. Understood facts don't.
